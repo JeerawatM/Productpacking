@@ -1,12 +1,12 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import Menupage from './menupage';
-import { Link } from 'react-router-dom';
-function generatepage() {
+import { Link, useLocation } from 'react-router-dom';
+function Generatepage() {
     const [order, setOrder] = useState([
-        { ProductImage: "", ProductName: "Arkamoto", width: 0, height: 0, length: 0, weight: 0, Amount: 2, Added: "day-month-year" },
-        { ProductImage: "", ProductName: "Arkamoto", width: 0, height: 0, length: 0, weight: 0, Amount: 2, Added: "day-month-year" },
-        { ProductImage: "", ProductName: "Arkamoto", width: 0, height: 0, length: 0, weight: 0, Amount: 2, Added: "day-month-year" },
-        { ProductImage: "", ProductName: "Arkamoto", width: 0, height: 0, length: 0, weight: 0, Amount: 2, Added: "day-month-year" },
+        { ProductImage: "", ProductName: "Arkamoto", width: 5, height: 5, length: 10, weight: 40, Amount: 2, Added: "day-month-year" },
+        { ProductImage: "", ProductName: "Arkamoto", width: 10, height: 15, length: 20, weight: 10, Amount: 2, Added: "day-month-year" },
+        { ProductImage: "", ProductName: "Arkamoto", width: 5, height: 10, length: 10, weight: 120, Amount: 2, Added: "day-month-year" },
+        { ProductImage: "", ProductName: "Arkamoto", width: 10, height: 7, length: 7, weight: 100, Amount: 2, Added: "day-month-year" },
     ]);
     return (
         <div className="grid grid-cols-12 h-screen">
@@ -17,7 +17,6 @@ function generatepage() {
                         <button className='btn'>กลับไปหน้าเพิ่ม Order</button>
                     </Link>
                     <p>จำนวนกล่องท้ังหมด : 4</p>
-                    <p>กล่องขนาด F :[4]    E:[4]    D:[4]    G:[4]   S:[4]   M:[4]    L:[4]</p>
 
                 </div>
                 <div className='flex justify-center' >
@@ -42,10 +41,7 @@ function generatepage() {
                                             <td>D</td>
                                             <td>Quality Control Specialist</td>
                                             <td>Blue</td>
-                                            <td>
-                                                <button className='btn btn-sm border-orange-300 bg-orange-300'>แก้ไข</button>
-                                                <button className='btn btn-sm border-red-400 ml-5 bg-red-400'>ลบ</button>
-                                            </td>
+                                            <td></td>
                                         </tr>
                                         <tr>
                                             <td colSpan={5} className='bg-stone-500'>
@@ -90,4 +86,4 @@ function generatepage() {
     )
 }
 
-export default generatepage
+export default Generatepage

@@ -32,7 +32,7 @@ const router = createBrowserRouter([
     element: <Addorder />,
   },
   {
-    path: "/Editorder",
+    path: "/Editorder/:order_id",
     element: <Editorderpage />,
   },
   {
